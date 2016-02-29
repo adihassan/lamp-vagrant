@@ -1,9 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$myscript = <<myscript
-sudo yum install -y nano
-myscript
+#$myscript = <<myscript
+#sudo yum install -y nano
+#myscript
 
 Vagrant.configure(2) do |config|
   
@@ -12,8 +12,8 @@ Vagrant.configure(2) do |config|
   config.vm.provision "file",
    source: "C:\\Users\\projects\\demo\\files\\git-config",
    destination: "~/.gitconfig"
- config.vm.provision "shell",
- inline: $myscript
+ config.vm.provision "shell", path "https://raw.githubusercontent.com/adihassan/lamp-vagrant/master/lamp.sh"
+ #inline: $myscript
 
   
   
