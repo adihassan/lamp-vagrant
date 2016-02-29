@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "file",
    source: "C:\\Users\\projects\\demo\\files\\git-config",
    destination: "~/.gitconfig"
- config.vm.provision "shell", path "https://raw.githubusercontent.com/adihassan/lamp-vagrant/master/lamp.sh"
+ config.vm.provision "shell", path: "https://raw.githubusercontent.com/adihassan/lamp-vagrant/master/lamp.sh"
  #inline: $myscript
 
   

@@ -16,7 +16,7 @@ sudo yum install -y mysql mysql-server mysql-devel
 chkconfig mysqld on
 service mysqld start
 mysql -u root -e "show databases";
-
+sudo yum install -y wget
 cd /vagrant
 sudo -u vagrant wget -q https://raw.githubusercontent.com/adihassan/lamp-vagrant/master/index.html
 
