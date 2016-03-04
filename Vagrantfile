@@ -9,9 +9,9 @@ Vagrant.configure(2) do |config|
   
   config.vm.box = "centos-6.5"
   
-  config.vm.provision "file",
-   source: "C:\\Users\\projects\\demo\\files\\git-config",
-   destination: "~/.gitconfig"
+  #config.vm.provision "file",
+   #source: "C:\\Users\\projects\\demo\\files\\git-config",
+   #destination: "~/.gitconfig"
  config.vm.provision "shell", path: "https://raw.githubusercontent.com/adihassan/lamp-vagrant/master/lamp.sh"
  #inline: $myscript
 
@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8081
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
